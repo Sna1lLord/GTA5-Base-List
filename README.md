@@ -1,4 +1,4 @@
-![alt text]([https://github.com/Sna1lLord/RDR2-Base/blob/main/images/rdr2.png?raw=true](https://github.com/Sna1lLord/GTA5-Base-List/blob/main/listui.png?raw=true))
+![alt text](https://raw.githubusercontent.com/Sna1lLord/GTA5-Base-List/main/listui.png)
 
 # Welcome!
 - This is an internal base for the game Grand Theft Auto V and the list UI version of it
