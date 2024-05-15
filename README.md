@@ -13,7 +13,7 @@
 - https://cmake.org/download/
 - I recommend using visual studio code for the project since that is what I created it in
 - Installation from CMD ***(important)***:
-1. git clone https://github.com/Sna1lLord/RDR2-Base.git --recurse-submodules
+1. git clone https://github.com/Sna1lLord/GTA5-Base-List.git --recurse-submodules
 - Now you should be able to open the folder installed with visual studio code and run "CMake: Select a Kit", "CMake: Configure" followed by "CMake: Build"
 
 # Issues
