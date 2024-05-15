@@ -1,0 +1,6 @@
+[submodule "vendor/minhook"]
+	path = vendor/minhook
+	url = https://github.com/TsudaKageyu/minhook.git
+[submodule "vendor/imguidx11"]
+	path = vendor/imguidx11
+	url = https://github.com/Sna1lLord/imguidx11
