@@ -117,7 +117,7 @@ Signatures* Signatures::Instance() {
 void Signatures::Initialize() {
     auto timerStart = std::chrono::system_clock::now();
 
-    definitions.swapchain = Scan("48 8B 0D ? ? ? ? 48 8B 01 44 8D 43 01 33 D2 FF 50 40 8B C8").Get().Rip().Cast<IDXGISwapChain**>();
+    definitions.swapchain = Scan("48 8B 0D ? ? ? ? 48 8B 01 44 8D 43").Get().Rip().Cast<IDXGISwapChain**>();
 
     definitions.frameCount = Scan("41 FF CF FF C0 83 F8 08 41 0F 44 C5 48 63 D8").Get().Sub(0x6).Rip(0x2).Cast<uint32_t*>();
     definitions.scriptVm = Scan("E8 ? ? ? ? 48 85 FF 48 89 1D").Get().Rip(0x1).Cast<uintptr_t>();
@@ -130,7 +130,7 @@ void Signatures::Initialize() {
     definitions.transactionQueue = Scan("89 4C 24 24 48 8B 0D").Get().Add(0x4).Rip().Cast<__int64*>();
     definitions.constructBasket = Scan("45 8B CC 44 8B C5 BA").Get().Sub(0x72).Cast<decltype(definitions.constructBasket)>();
     definitions.addItemToBasket = Scan("57 48 83 EC 20 48 8B F2 48 8D 54 24").Get().Sub(0xA).Cast<decltype(definitions.addItemToBasket)>();
-    definitions.processTransaction = Scan("83 7B 40 01 48 8B 9C 24").Get().Add(0x18).Rip(0x1).Cast<decltype(definitions.processTransaction)>();
+    definitions.processTransaction = Scan("83 7B 40 01 48 8B 9C 24 C8 00").Get().Add(0x18).Rip(0x1).Cast<decltype(definitions.processTransaction)>();
 
     definitions.gameState = Scan("83 3D ? ? ? ? ? 75 17 8B 43 20 25").Get().Rip(0x2).Add(1).Cast<int*>();
 
